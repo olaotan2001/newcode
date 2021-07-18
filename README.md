@@ -1,1 +1,3 @@
-# code4
+# maven-project
+
+Simple Maven Project
