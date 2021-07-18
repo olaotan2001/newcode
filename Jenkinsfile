@@ -16,6 +16,11 @@ pipeline {
                 
             }
         }
+        stage ('deploy to tomcat') {
+            steps {
+                deploy adapters: [tomcat8(credentialsId: 'tomcat_user', path: '', url: 'http://10.0.0.38:8080/')], contextPath: null, war: '**/*.war'
+            }
+        }
 
     }
 }
